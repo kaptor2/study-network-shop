@@ -11,4 +11,5 @@ export const WithContextService = () => (Wrapped: any) => {
       </ServiceConsumer>
     );
   };
+  
 };
