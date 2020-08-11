@@ -1,7 +1,7 @@
 import React, { ReactPropTypes as TProp } from "react";
 import { ServiceConsumer } from "../ServiceContext/ServiceContext";
 
-export const HocContext = () => (Wrapped: any) => {
+export const WithContextService = () => (Wrapped: any) => {
   return (props: TProp) => {
     return (
       <ServiceConsumer>
