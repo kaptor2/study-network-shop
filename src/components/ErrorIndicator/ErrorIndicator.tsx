@@ -1,7 +1,7 @@
 import React from 'react';
 import './ErrorIndicator.scss';
 
-type TProp = {
+type TProps = {
 
 }
 
@@ -9,7 +9,7 @@ enum cn {
     ErrorIndicator = 'error-indicator',
 }
 
-export const ErrorIndicator = ({ }: TProp) => {
+export const ErrorIndicator = ({ }: TProps) => {
     return (
         <div className={cn.ErrorIndicator}>
             ErrorIndicator
