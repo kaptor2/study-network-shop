@@ -13,10 +13,10 @@ enum cn {
 
 export const App = WithContextService((props: TProp) => {
     const { StoreService } = props;
-    StoreService && console.log(StoreService.getBooks());
+    StoreService && console.log(StoreService.getAllbooks());
     return (
         <div className={cn.App}>
-            App
+            <b>App</b>
         </div>
     );
 });

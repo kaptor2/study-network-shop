@@ -1,3 +1,12 @@
+type book = {
+    id: 1,
+    title: string,
+    author: number,
+    description: string,
+    image: string
+}
+
 export interface IStoreService {
-    getBooks(): Array<any>
+    getAllbooks: () => Promise<book[]>,
+    getbook: (id: number) => Promise<book>
 }

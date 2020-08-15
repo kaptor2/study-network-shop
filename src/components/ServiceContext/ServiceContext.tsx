@@ -1,14 +1,10 @@
 import { createContext } from "react";
-import { IStoreService } from "../../services/IStoreService";
-
-const defaultService: IStoreService = {
-    getBooks: () => []
-}
+import { StoreService } from "../../services/StoreService";
 
 const {
     Provider: ServiceProvider,
     Consumer: ServiceConsumer
-} = createContext(defaultService);
+} = createContext(new StoreService());
 
 export {
     ServiceProvider,
