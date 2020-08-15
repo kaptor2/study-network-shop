@@ -1,14 +1,9 @@
-import React, { ReactPropTypes as TProp } from "react";
+import React from "react";
 import { ServiceConsumer } from "../ServiceContext/ServiceContext";
+import { IStoreService } from "../../services/IStoreService";
 
-export const WithContextService = () => (Wrapped: any) => {
-  return (props: TProp) => {
-    return (
-      <ServiceConsumer>
-        {(StoreService) => {
-          return <Wrapped {...props} StoreService={StoreService} />;
-        }}
-      </ServiceConsumer>
-    );
-  };
-};
+export const WithContextService = (Wrapped: any) => (props: any) => (
+  <ServiceConsumer>
+    {(StoreService: IStoreService) => <Wrapped {...props} StoreService={StoreService} />}
+  </ServiceConsumer>
+);
